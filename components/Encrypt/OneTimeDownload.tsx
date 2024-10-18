@@ -1,0 +1,33 @@
+import * as Checkbox from "@radix-ui/react-checkbox";
+import { CheckIcon } from "lucide-react";
+import { Control, Controller } from "react-hook-form";
+import { EncryptData } from "./types";
+
+export const OneTimeDownload = (props: { control: Control<EncryptData> }) => {
+  return (
+    <Controller
+      name="oneTime"
+      control={props.control}
+      render={({ field }) => (
+        <div className="flex items-center font-[family-name:var(--font-geist-mono)]">
+          <Checkbox.Root
+            id="onetime-download"
+            checked={field.value}
+            onCheckedChange={field.onChange}
+            className="size-[15px] sm:size-[20px] transition-colors appearance-none flex items-center justify-center rounded bg-foreground outline-none active:scale-95"
+          >
+            <Checkbox.Indicator className="dark:text-blue-700 text-blue-500">
+              <CheckIcon className="h-3 w-3 sm:h-4 sm:w-4" strokeWidth={4} />
+            </Checkbox.Indicator>
+          </Checkbox.Root>
+          <label
+            className="pl-2 text-xs sm:text-base leading-none"
+            htmlFor="onetime-download"
+          >
+            One-time download
+          </label>
+        </div>
+      )}
+    />
+  );
+};
