@@ -32,3 +32,28 @@ export const verifyApiKey = async (key: string) => {
     apiId: process.env.UNKEY_API_ID!,
   });
 };
+
+export const getAllApiKeys = async ({
+  limit = 5,
+  cursor,
+}: {
+  limit: number;
+  cursor?: string;
+}) => {
+  const unkey = new Unkey({
+    rootKey: process.env.UNKEY_ROOT_KEY!,
+  });
+  return unkey.apis.listKeys({
+    limit,
+    cursor,
+    revalidateKeysCache: true,
+    apiId: process.env.UNKEY_API_ID!,
+  });
+};
+
+export const deleteApiKey = async (keyId: string) => {
+  const unkey = new Unkey({
+    rootKey: process.env.UNKEY_ROOT_KEY!,
+  });
+  return unkey.keys.delete({ keyId });
+};

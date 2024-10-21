@@ -3,6 +3,7 @@ declare global {
     interface ProcessEnv {
       UNKEY_ROOT_KEY: string;
       UNKEY_API_ID: string;
+      CRON_SECRET: string;
     }
   }
 }
