@@ -23,15 +23,15 @@ export function EnterDecryptionKey({ password, loading, setPassword }: Props) {
       <h1 className="text-xl sm:text-3xl font-[family-name:var(--font-geist-mono)]">
         Enter decryption key
       </h1>
-      <p className="text-xs text-center sm:text-left sm:text-base dark:text-neutral-400 transition-colors">
+      <p className="text-xs text-center sm:text-left sm:text-base transition-colors text-content-subtle">
         Do not refresh this window as secret might be restricted to one time
         download.
       </p>
       <input
         className={cn(
-          "w-full max-w-sm rounded-md outline-none p-2 border border-solid transition-colors border-black/[.345] dark:border-white/[.145] dark:bg-neutral-900 bg-gray-100 placeholder-black/[.5] dark:placeholder-white/[.25] text-xs sm:text-base",
+          "w-full max-w-sm rounded-md outline-none p-2 border border-solid transition-colors border-border bg-background-subtle placeholder-content-subtle text-xs sm:text-base",
           {
-            "dark:border-red-500 border-red-500 dark:shadow-red-400 shadow-red-400 shadow-[0_2px_10px]":
+            "border-alert shadow-alert-subtle shadow-[0_2px_10px]":
               invalidPassword,
           }
         )}
@@ -44,13 +44,13 @@ export function EnterDecryptionKey({ password, loading, setPassword }: Props) {
         placeholder="Your decryption key..."
       />
       {invalidPassword && (
-        <p className="text-xs font-[family-name:var(--font-geist-mono)] text-red-500 dark:text-red-400">
+        <p className="text-xs font-[family-name:var(--font-geist-mono)] text-alert">
           Invalid password. Please, try again.
         </p>
       )}
       <button
         onClick={submitPassword}
-        className="rounded-md border border-solid border-transparent transition-colors bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] active:scale-95 text-sm sm:text-base font-medium h-8 sm:h-10 px-4 sm:px-5 flex items-center gap-2 shadow-[0_2px_10px] shadow-foreground disabled:shadow-none disabled:dark:bg-[#ccc] disabled:active:scale-100 disabled:cursor-not-allowed"
+        className="rounded-md border border-solid border-transparent transition-colors bg-foreground text-background hover:bg-foreground/80 active:scale-95 text-sm sm:text-base font-medium h-8 sm:h-10 px-4 sm:px-5 flex items-center gap-2 shadow-[0_2px_10px] shadow-foreground disabled:shadow-none disabled:bg-foreground/70 disabled:active:scale-100 disabled:cursor-not-allowed"
       >
         {loading ? (
           <LoaderIcon

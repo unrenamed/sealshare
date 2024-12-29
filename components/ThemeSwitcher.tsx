@@ -63,7 +63,7 @@ export const ThemeSwitcher = () => {
     <Toolbar.Root>
       <Toolbar.ToggleGroup
         onValueChange={handleValueChange}
-        className="dark:bg-neutral-800 bg-gray-100 rounded-md w-[92px] h-[46px] relative"
+        className="bg-background-subtle rounded-md w-[92px] h-[46px] relative"
         value={theme}
         type="single"
       >

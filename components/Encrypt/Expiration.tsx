@@ -37,7 +37,7 @@ const ExpirationOption = ({ value, label, id }: ExpirationOptionProps) => {
         value={value}
         className="size-[15px] sm:size-[20px] rounded-full bg-foreground outline-none transition-colors active:scale-95"
       >
-        <RadioGroup.Indicator className="relative flex size-full items-center justify-center after:block after:size-[10px] after:rounded-full after:dark:bg-blue-700 after:bg-blue-500" />
+        <RadioGroup.Indicator className="relative flex size-full items-center justify-center after:block after:size-[10px] after:rounded-full after:bg-accent" />
       </RadioGroup.Item>
       <label className="text-xs sm:text-base pl-2 leading-none" htmlFor={id}>
         {label}

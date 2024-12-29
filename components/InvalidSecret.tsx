@@ -11,7 +11,7 @@ export const InvalidSecret = () => {
         <h2 className="text-md sm:text-lg font-[family-name:var(--font-geist-mono)] text-center">
           Opened before
         </h2>
-        <p className="text-xs text-center sm:text-left sm:text-base dark:text-neutral-400 transition-colors">
+        <p className="text-xs text-center sm:text-left sm:text-base text-content-subtle transition-colors">
           A secret can be limited to a single download. It may be inaccessible
           if the sender accessed this link prior to your viewing.
         </p>
@@ -20,7 +20,7 @@ export const InvalidSecret = () => {
         <h2 className="text-md sm:text-lg font-[family-name:var(--font-geist-mono)] text-center">
           Broken link
         </h2>
-        <p className="text-xs text-center sm:text-left sm:text-base dark:text-neutral-400 transition-colors">
+        <p className="text-xs text-center sm:text-left sm:text-base text-content-subtle transition-colors">
           The link needs to be an exact match for decryption to succeed; it may
           be missing some essential characters.
         </p>
@@ -29,14 +29,14 @@ export const InvalidSecret = () => {
         <h2 className="text-md sm:text-lg font-[family-name:var(--font-geist-mono)] text-center">
           Expired
         </h2>
-        <p className="text-xs text-center sm:text-left sm:text-base dark:text-neutral-400 transition-colors">
+        <p className="text-xs text-center sm:text-left sm:text-base text-content-subtle transition-colors">
           No secret is eternal. All saved secrets will expire and self-destruct
           automatically. The duration can range from one hour to one week.
         </p>
       </div>
       <Link
         href="/"
-        className="rounded-md border border-solid border-transparent transition-colors bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] active:scale-95 text-sm sm:text-base font-medium h-8 sm:h-10 px-4 sm:px-5 flex items-center gap-2 shadow-[0_2px_10px] shadow-foreground"
+        className="rounded-md border border-solid border-transparent transition-colors bg-foreground text-background hover:bg-foreground/80 active:scale-95 text-sm sm:text-base font-medium h-8 sm:h-10 px-4 sm:px-5 flex items-center gap-2 shadow-[0_2px_10px] shadow-foreground"
       >
         <HomeIcon className="h-3 w-3 sm:h-4 sm:w-4" strokeWidth={2} />
         Go to homepage

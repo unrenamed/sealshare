@@ -14,11 +14,9 @@ export const DecryptionKeyInput = (props: {
       render={({ field }) => (
         <input
           className={cn(
-            "w-full max-w-sm rounded-md outline-none p-2 transition-colors border border-solid border-black/[.345] dark:border-white/[.145] dark:bg-neutral-900 bg-gray-100 placeholder-black/[.5] dark:placeholder-white/[.25] text-xs sm:text-base",
-            {
-              "dark:border-red-500 border-red-500 dark:shadow-red-400 shadow-red-400 shadow-[0_2px_10px]":
-                !!props.error,
-            }
+            "w-full max-w-sm rounded-md outline-none p-2 transition-colors text-xs sm:text-base",
+            "border border-solid border-border bg-background-subtle placeholder-content-subtle",
+            { "border-alert shadow-alert-subtle shadow-[0_2px_10px]": !!props.error }
           )}
           autoComplete="off"
           spellCheck={false}

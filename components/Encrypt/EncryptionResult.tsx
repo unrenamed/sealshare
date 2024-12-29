@@ -28,7 +28,7 @@ export const EncryptionResult = ({ messageKey, password }: Props) => {
         Your Message is Encrypted!
       </h1>
 
-      <p className="text-xs text-center sm:text-left sm:text-base dark:text-neutral-400 transition-colors">
+      <p className="text-xs text-center sm:text-left sm:text-base text-content-subtle transition-colors">
         Your message has been successfully encrypted. To securely share it with
         others, simply copy the unique link below and send it to your intended
         recipient.
@@ -36,12 +36,12 @@ export const EncryptionResult = ({ messageKey, password }: Props) => {
 
       {!base ? (
         <div className="w-full flex flex-col gap-2">
-          <div className="w-full h-[45px] dark:bg-neutral-700 rounded-lg animate-pulse" />
-          <div className="w-full h-[45px] dark:bg-neutral-700 rounded-lg animate-pulse" />
-          <div className="w-full h-[45px] dark:bg-neutral-700 rounded-lg animate-pulse" />
+          <div className="w-full h-[45px] bg-background-subtle rounded-lg animate-pulse" />
+          <div className="w-full h-[45px] bg-background-subtle rounded-lg animate-pulse" />
+          <div className="w-full h-[45px] bg-background-subtle rounded-lg animate-pulse" />
         </div>
       ) : (
-        <ul className="w-full grid grid-rows-3 overflow-hidden border divide-y rounded-lg divide-border dark:border-neutral-700 dark:divide-neutral-700">
+        <ul className="w-full grid grid-rows-3 overflow-hidden border divide-y rounded-lg divide-border border-border">
           <Row label="One-click link" value={oneClickLink} />
           <Row label="Short link" value={shortLink} />
           <Row label="Decryption key" value={password} />
@@ -73,13 +73,13 @@ const Row = ({ label, value }: RowProps) => {
       key={label}
       className="w-full grid items-center grid-cols-12 px-4 py-2 gap-4"
     >
-      <div className="col-span-4 flex items-center gap-4">
+      <div className="col-span-4 flex items-center gap-4 text-content">
         <button
-          className="h-6 w-6 sm:h-8 sm:w-8 flex justify-center items-center rounded-full hover:dark:bg-neutral-900 transition-colors"
+          className="h-6 w-6 sm:h-8 sm:w-8 flex justify-center items-center rounded-full hover:bg-background-subtle transition-colors"
           onClick={debouncedToast}
         >
           <CopyIcon
-            className="h-3 w-3 sm:h-4 sm:w-4 dark:stroke-neutral-400"
+            className="h-3 w-3 sm:h-4 sm:w-4 stroke-content-subtle"
             strokeWidth={2}
           />
         </button>
