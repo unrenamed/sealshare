@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Toaster } from "sonner";
+import { Toaster } from "@/components/Toaster";
 import { ThemeProvider } from "next-themes";
 import { OnlineStatus } from "@/components/OnlineStatus";
 import { WelcomeToast } from "@/components/WelcomeToast";
@@ -44,7 +44,7 @@ export default function RootLayout({
               </div>
             </div>
 
-            <footer className="w-full flex items-center justify-center border-t border-black/[.08] dark:border-white/[.1] mx-auto text-center text-xs gap-8 py-8">
+            <footer className="w-full flex items-center justify-center border-t border-border mx-auto text-center text-xs gap-8 py-8">
               <p>
                 Powered by{" "}
                 <a

@@ -18,8 +18,21 @@ const config: Config = {
     },
     extend: {
       colors: {
-        background: "hsl(var(--background))",
+        border: "hsl(var(--border))",
         foreground: "hsl(var(--foreground))",
+        accent: "hsl(var(--accent))",
+        background: {
+          DEFAULT: "hsl(var(--background))",
+          subtle: "hsl(var(--background-subtle))",
+        },
+        content: {
+          DEFAULT: "hsl(var(--content))",
+          subtle: "hsl(var(--content-subtle))",
+        },
+        alert: {
+          DEFAULT: "hsl(var(--alert))",
+          subtle: "hsl(var(--alert-subtle))",
+        },
       },
     },
   },
