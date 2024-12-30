@@ -6,11 +6,11 @@
   :root {
     --accent: 217 91% 60%;
     --border: 0 0% 90%;
-    --foreground: 0 0% 3.9%;
-    --background: 0 0% 100%;
+    --foreground: 0 0% 4%;
+    --background: 0 0% 98%;
     --background-subtle: 60 9% 94%;
-    --content: 240 10% 3.9%;
-    --content-subtle: 240 3.8% 46.1%;
+    --content: 240 10% 4%;
+    --content-subtle: 240 4% 46%;
     --alert: 0 84% 60%;
     --alert-subtle: 0 91% 71%;
   }
@@ -19,10 +19,10 @@
     --accent: 224 76% 48%;
     --border: 0 0% 20%;
     --foreground: 0 0% 98%;
-    --background: 0 0% 3.92%;
+    --background: 0 0% 4%;
     --background-subtle: 24 10% 10%;
     --content: 240 10% 90%;
-    --content-subtle: 240 3.8% 46.1%;
+    --content-subtle: 234 0% 47%;
     --alert: 0 84% 60%;
     --alert-subtle: 0 91% 71%;
   }
